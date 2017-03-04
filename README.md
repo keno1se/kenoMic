@@ -1,0 +1,2 @@
+# kenoMic
+This web page project forced me to learn allot on applying down to earth HTML5, CSS3/LESS and java script structures: JS – mouseout, mouseover, onclic, hover. Pre-processor LESS structuring for CSS-styling – good stuff! Solid understanding on how to position and size items on page, z-indexing, align text in a controlled way, Deep colour management – hsla is to prefer. Extract feature and learn from W3.css. All this and a tons of details. I got it to work this time – next time I make it better ;-)

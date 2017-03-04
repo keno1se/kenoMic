@@ -1,0 +1,438 @@
+@import "init";
+@import "mixins";
+@import "Color_Shadow_Gradient";
+
+@base-size: 12px;
+
+/* Basics */
+html
+{
+  font-family: 'Open Sans', verdana, helvetica, sans-serif;
+  font-size: @base-size;
+}
+body
+{
+  background: @main-color;
+}
+p
+{
+  font-size: @base-size;
+}
+h1
+{
+  font-size: @base-size + 10px;
+}
+h2
+{
+  font-size: @base-size + 4px;
+}
+h3
+{
+  font-size: @base-size + 2px;
+}
+
+
+
+                          /*************************************************/
+                          /************ Corner Box styling *****************/
+                          /*************************************************/
+
+      /*if not absolute the box will be on top and push every div down, like relative
+        everything will be related to the top, left values, be at same level
+        in F12 layout top, left will affect only the offset value */
+
+      /*Must have the position:absolute to work, but the other boxes needs NOT, they'll be relative to the absolute box
+      - TOP specifies how far an ABSOLUTLY POSITIONED box top marging edge is offset below the top edge of the box 'containing block'
+      - LEFT specifies how far an ABSOLUTLY POSITIONED box left marging edge is offset to the right of the left edge of the box 'containing block'
+      - MARGING set values to the thickness of the marging area */
+    
+      /*By changing the value in mixins.less for @TrightBott and @LrightBott, you move all the nested divs
+      <section id="rightBottBox">
+        nested div class=textBox, common styling for all the meny divs
+            id=#rightBottBox* unik styling for the individual div's */
+
+#rightBottBox{
+    .textBox{
+     position:absolute;
+     border:@borderStyleTextBox;
+     border-radius:@borderRadius-size;
+        }
+       #rightBottBox1{
+        top:@TrightBott;    //125px, mixins.less
+        left:@LrightBott;   //590px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box1;
+        box-shadow:@rightBottBox1;
+        z-index:5;
+        }
+       #rightBottBox2{
+        top:@TrightBott + 10px;    //135px
+        left:@LrightBott + 10px;   //600px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box2;
+        z-index:4;
+        }
+       #rightBottBox3{
+        top:@TrightBott + 20px;    //145px
+        left:@LrightBott + 20px;   //620px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box3;
+        z-index:3;
+        }
+}   //end #rightBottBox
+
+#leftBottBox{
+    .textBox{
+     border:@borderStyleTextBox;
+     border-radius:@borderRadius-size;
+     position:absolute;
+    }
+       #leftBottBox1{
+        top:@TleftBott;    //125px
+        left:@LleftBott;   //590px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box1;
+        box-shadow:@leftBottBox1;
+        z-index:5;
+        }
+       #leftBottBox2{
+        top:@TleftBott + 10px;    //135px
+        left:@LleftBott - 10px;   //580px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box2;
+        z-index:4;
+        }
+       #leftBottBox3{
+        top:@TleftBott + 20px;    //145px
+        left:@LleftBott - 20px;   //570px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box3;
+        z-index:3;
+        }
+}   //end #leftBottBox
+
+
+#rightTopBox{
+    .textBox{
+     border:@borderStyleTextBox;
+     border-radius:@borderRadius-size;
+     position:absolute;
+    }
+       #rightTopBox1{
+        top:@TrightTop;    //25px
+        left:@LrightTop;   //590px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box1;
+        box-shadow:@rightTopBox1;
+        z-index:5;
+        }
+       #rightTopBox2{
+        top:@TrightTop - 10px;    //15px
+        left:@LrightTop + 10px;   //600px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box2;
+        z-index:4;
+        }
+       #rightTopBox3{
+        top:@TrightTop - 20px;    //5px
+        left:@LrightTop + 20px;   //610px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box3;
+        z-index:3;
+        }
+}   //end #rightTopBox
+
+
+    #leftTopBox{
+    .textBox{
+     border:@borderStyleTextBox;
+     border-radius:@borderRadius-size;
+     position:absolute;
+    }
+       #leftTopBox1{
+        top:@TleftTop;    //25px
+        left:@LleftTop;   //80px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box1;
+        box-shadow:@leftTopBox1;
+        z-index:5;
+        }
+       #leftTopBox2{
+        top:@TleftTop - 10px;    //15px
+        left:@LleftTop - 10px;   //70px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box2;
+        z-index:4;
+        }
+       #leftTopBox3{
+        top:@TleftTop - 20px;    //5px
+        left:@LleftTop - 20px;   //60px
+        width:@textBoxWith;
+        height:@textBoxHeight;
+        background-color:@box3;
+        z-index:3;
+        }
+}   //end #leftTopBox
+
+
+
+                          /*************************************************/
+                          /************ picture styling ********************/
+                          /*************************************************/
+
+
+//    <div id="mid1"class="mid">  
+.mid{
+    position:fixed;
+    margin-top:@fromToppDist + 12px;       //remember spacing arround + or it'll not work, count from page top                    
+    margin-left: @fromLeftDist + 50px;
+    width: 590px;
+    height:178px;
+    line-height:178px;
+    border:2px solid black;
+    box-shadow:@midBoxShadow;   //inset
+    background: @midBgColor;     //transparent
+    //border-radius:@borderRadius-size + 160px;
+   
+     z-index:2;  /*
+            - z-index:2 - very bottom in stack
+            - z-index:5 - top of stack     */
+   
+            /*p class="mouseOverOutPic" nested in .mid class, contain all p with the text
+                can move the whole text box
+                    here change the text color etc */
+        .mouseOverOutPic {
+            //display:inline-block;      // no need but gives option to hide (display:none)
+            vertical-align:top;      // must have as reference, ALL TEXT comes out in boxes!?
+            margin-top: @fromToppDist + 15px;       //remember spacing arround + or it'll not work, count from page top                      
+            margin-left: @fromLeftDist + 2px;
+            width: 486px;   //width of the green gradient bg textTopBox
+            height:131px;
+            font-size:@base-size;   //12px
+            line-height:16px;        //should be bigger then font-size to allow it to expand 
+            border:@borderStyle;
+            border-radius:@borderRadius-size;
+            padding-top:10px;   //padding, space around text, can move and align the text block
+            padding-left:65px;  // move the text left in the text box
+
+            /*** background and gradient ***/    
+           background:@textBoxBottomBg;
+           background:@textBoxBottomBgSafari;
+           background:@textBoxBottomBgOpera;
+           background:@textBoxBottomBgFirefox;
+           background:@textBoxBottomBgStandard;
+
+           /* if want to change back to original textBoxTopBg gray
+           background:@textBoxTopBg;
+           background:@textBoxTopBgSafari;
+           background:@textBoxTopBgOpera;
+           background:@textBoxTopBgFirefox;
+           background:@textBoxTopBgStandard;
+           */         
+
+          /*justify, each line is stretched so that every line has equal width, 
+            and the left and right margins are straight (like in magazines and newspapers)
+            h3{ 
+               //text-align:justify;   
+                text-transform:capitalize;}*/   
+
+
+
+            /* text color */
+            color:@text-color;   //blue, remember to change to this color also in mouseScript.js
+                               //color:rgb(0, 0, 255);  blue
+                              //color:rgba(0, 0, 255, 1.0);   blue with option to change alpha 0.0 fully transparent, 1,0 fully opaque 
+
+    }   //END .mouseOverOutPic
+}   //END .mid
+
+
+
+
+                          /***************************************************************************/
+                          /************ position/layout the pictures on the page  ********************/
+                          /***************************************************************************/
+
+
+    /*** This sectionPic will move all nested pic in relation to div's above ***/
+    /* - if no position it'll be just below the lowest dev, whitch is leftmeny div
+       - if position relative the div will be positoned relative to it's NORMAL position, must use use marging and such with the positon */
+
+#sectionPic{
+    position: absolute;
+    margin-top:@fromToppDist;       //0px
+    margin-left: @fromLeftDist;     
+    
+    /* nested images in sectionPic */
+    /* .pic is common styling for all images */
+    .pic{
+        border:@borderStylePic;
+        border-radius:@borderRadius-size;
+        box-shadow:@picBoxShadow;
+        margin:5px;    //gives space between the pictures
+        float:left;     //lines up all pic to the left, without only this only pic1, 8, 9 has position  
+
+        &:hover{
+        border:2px solid orange;    //border orange at hover any pic
+
+   }
+}
+
+    /* #pic* is individual dimentions (width, height) for the images*/
+    /* This is set exactly as the image sizes, if omitted the border styling will not render correctly*/
+
+  
+           #pic1{
+        margin-top:@fromToppDist + 20px;       //remember spacing arround + or it'll not work, count from page top                    
+        margin-left:@fromLeftDist + 685px;
+        width: 240px;     
+        height:180px;         
+        //opacity:0.5; test
+        }
+           #pic2{
+        margin-top:@fromToppDist + 40px;                    
+        margin-left:@fromLeftDist + 15px;
+        width: 180px;     
+        height:240px;     
+        }
+
+           #pic3{
+        margin-top:@fromToppDist - 70px;       //remember spacing arround - or it'll not work, count from page top                                        
+        width: 240px;     
+        height:180px;     
+        }
+           #pic4{
+        margin-top:@fromToppDist - 40px;                    
+        margin-left:@fromLeftDist;
+        width: 180px;     
+        height:240px;     
+        }
+
+            #pic5{
+        margin-top:@fromToppDist - 15px;                    
+        margin-left:@fromLeftDist + 5px;
+        width: 240px;     
+        height:142px;     
+        }
+            #pic6{
+        margin-top: @fromToppDist + 10px;
+        margin-left:@fromLeftDist + 15px;
+        width: 180px;     
+        height:240px;     
+        //clear:left;     // starts a new float on a new row
+        }
+
+           #pic7{
+        margin-top: @fromToppDist + 30px;
+        margin-left:@fromLeftDist + 65px;
+        width: 180px;     
+        height:240px;     
+        //margin-left:740px;
+        }
+           #pic8{
+        margin-top: @fromToppDist - 135px;
+        margin-left:@fromLeftDist + 15px;
+        width: 180px;     
+        height:240px;     
+        }
+           #pic9{
+        margin-top: @fromToppDist - 125px;
+        margin-left:@fromLeftDist + 270px;   //!remember to surround + with spaces or will not render
+        width: 180px;     
+        height:240px;     
+        }
+
+
+}   //closing bracket #sectionPic
+
+
+
+/*****************************************************************************/
+/*** This is the W3 css styling styling the zooming of the images function ***/
+/*****************************************************************************/
+
+/* zooming effect setup*/
+.w3-animate-zoom {-webkit-animation:animatezoom 0.6s;animation:animatezoom 0.6s}    //the speed of inzoming
+@-webkit-keyframes animatezoom{from{-webkit-transform:scale(0)} to{-webkit-transform:scale(1)}}     //safari needs this
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}     //IE need this line
+
+/*
+     - opacity on img when hover, don't want that 
+     - if want to use then put below in and also ad: class="w3-hover-opacity" on the image
+    .w3-hover-opacity:hover{opacity:0.60;filter:alpha(opacity=60);-webkit-backface-visibility:hidden}
+    .w3-hover-opacity-off:hover{opacity:1;filter:alpha(opacity=100);-webkit-backface-visibility:hidden}
+*/ 
+
+/* 
+    - This is the onClick window
+    - put z-index to stack ontop (5)
+    - Change for hover background, green, default is black - background-color:rgba(0,255,0,0.4) green
+    - this will fill up the whole window, the 0.4 opacity makes it semi-transparent
+*/
+
+.w3-modal{z-index:5;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;
+          background-color:rgb(0,0,0);background-color:rgba(0,255,0,0.4)}   //use rgb if rgba not working 
+
+// this is styling the new window, with the img, which is the content in the onClic window
+.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}  //#fff white
+
+/* style the red x closing box, actually not needed, can close by clicking anywhere in the window */
+.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}    //when hover make BG #f44336 red, x white #fff
+.w3-text-white,.w3-hover-text-white:hover{color:#fff!important} //not hover x is #fff, white,from start
+.w3-xxlarge{font-size:36px!important}   //set the x size
+.w3-container{padding:0.01em 16px}      //for the size of closing, x, red window
+.w3-display-topright{position:absolute;right:0;top:0}   //place the red x closing box
+        
+/*****************************************************************************/
+
+#textBoxBottom{
+    position:absolute;      //no position, the page messes up,      
+    margin-top:@fromToppDist + 580px;       //margings count from top page
+    margin-left:@fromLeftDist + 755px;
+    width: 456px;       // the div box width
+    height: 100px;      // the div box height
+    line-height:100px;      // text line height, same as div box height, gives marging to nested line-height to play with
+    border:@borderStyle;
+    box-shadow:@picBoxShadow;
+    background:@textBoxBottomBg;            //For browsers that do not support gradients, bg vill be grey color
+    background:@textBoxBottomBgSafari;      // Safari 5.1-6.0
+    background:@textBoxBottomBgOpera;       // For Opera 11.6-12.0
+    background:@textBoxBottomBgFirefox;     // For Firefox 3.6-15
+    background:@textBoxBottomBgStandard;    // standard syntax, renders last
+
+               /* if want to change to original textBoxTopBg gray */
+           /*
+           background:@textBoxTopBg;
+           background:@textBoxTopBgSafari;
+           background:@textBoxTopBgOpera;
+           background:@textBoxTopBgFirefox;
+           background:@textBoxTopBgStandard;
+                                             */
+
+        #textBoxBottomNest{
+
+           display:inline-block;    // no need but gives option to hide (display:none)
+           vertical-align:top;      // must have as reference
+           font-size:@base-size + 4px;    //12+4=16px
+           line-height:20px;        //should be bigger then font-size to allow it to expand 
+           color:@text-color;   //blue
+           padding-left: 20px;      //padding: align the text in the div
+           padding-top: 20px;
+        }
+}
+
+
+
+      
+  

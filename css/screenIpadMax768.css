@@ -1,0 +1,103 @@
+
+/*--------------------------------------------------------------------------*/
+/*         Media screen sizes                                               */
+/*          - (max-width: 768px)                                            */
+/*          - (min-width: 769px) and (max-width: 1224px)                    */
+/*          - (min-width: 1225px) and (max-width: 2880px)                   */
+/*--------------------------------------------------------------------------*/
+@media all and (max-width: 768px) {
+  /*body{
+            background: green;
+    }*/
+  /* if no display block it'll be a gab at bottom of img div  
+            img{
+                display: block;
+            }*/
+  #textBoxBottom {
+    display: none;
+  }
+  .mid {
+    position: relative;
+    margin-top: 13px;
+  }
+  .textBox {
+    margin-top: 0px;
+  }
+  #sectionPic {
+    position: relative;
+    float: left;
+  }
+  #pic1 {
+    margin-top: 55px;
+    margin-left: 30px;
+  }
+  #pic1 img {
+    width: 144px;
+    height: 108px;
+  }
+  #pic2 {
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  #pic2 img {
+    width: 108px;
+    height: 144px;
+  }
+  #pic3 {
+    margin-top: 45px;
+    margin-left: 40px;
+  }
+  #pic3 img {
+    width: 144px;
+    height: 108px;
+  }
+  #pic4 {
+    margin-top: 25px;
+    margin-left: 40px;
+  }
+  #pic4 img {
+    width: 108px;
+    height: 144px;
+  }
+  #pic5 {
+    /*img5 must be below img4 (+130px), to make img6 to float all the way left on screen*/
+    margin-top: 55px;
+    margin-left: 40px;
+  }
+  #pic5 img {
+    width: 144px;
+    height: 85.2px;
+  }
+  #pic6 {
+    margin-top: 55px;
+    margin-left: 40px;
+  }
+  #pic6 img {
+    width: 108px;
+    height: 144px;
+  }
+  #pic7 {
+    margin-top: 55px;
+    margin-left: 40px;
+  }
+  #pic7 img {
+    width: 108px;
+    height: 144px;
+  }
+  #pic8 {
+    margin-top: -15px;
+    margin-left: 40px;
+  }
+  #pic8 img {
+    width: 126px;
+    height: 168px;
+  }
+  #pic9 {
+    margin-top: 55px;
+    margin-left: 40px;
+  }
+  #pic9 img {
+    width: 108px;
+    height: 144px;
+  }
+}

@@ -1,0 +1,133 @@
+@import "imgRatio";
+@import "mixins";
+
+
+/*--------------------------------------------------------------------------*/
+/*         Media screen sizes                                               */
+/*          - (max-width: 768px)                                            */
+/*          - (min-width: 769px) and (max-width: 1224px)                    */
+/*          - (min-width: 1225px) and (max-width: 2880px)                   */
+/*--------------------------------------------------------------------------*/
+
+
+
+@media all and (max-width: 768px){
+        
+    /*body{
+            background: green;
+    }*/
+    
+            /* if no display block it'll be a gab at bottom of img div  
+            img{
+                display: block;
+            }*/
+    
+
+    #textBoxBottom{
+        display: none;
+    }
+    
+    //    <div id="mid1"class="mid"> marging-top, marging-left will move the whole div 
+    .mid{
+    position:relative;     
+    margin-top:@fromToppDist + 13px;       //remember spacing arround + or it'll not work, count from page top      
+    }
+    
+    //with this change all corner boxes at once
+    .textBox{
+        margin-top: 0px;
+    }
+    
+        //by making the #sectionPic DIV relative all the nested div's will be absolute and float left.
+    #sectionPic{
+        position: relative;
+        float: left;
+    }
+                #pic1{
+        margin-top:@fromToppDist + 55px;   //remember spacing arround + or it'll not work
+        margin-left:@fromLeftDist + 15px;
+            img{
+                width: @imgRatioWL6;     
+                height: @imgRatioHL6;                             
+            }                    
+        }
+       
+            #pic2{
+        margin-top:@fromToppDist + 10px;                    
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @imgRatioWP6;     
+                height: @imgRatioHP6;     
+            }
+        }
+
+    
+            #pic3{
+        margin-top:@fromToppDist + 45px;
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @imgRatioWL6;     
+                height: @imgRatioHL6;     
+            }
+        }
+
+              #pic4 {
+        margin-top:@fromToppDist + 25px;                    
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @imgRatioWP6;     
+                height: @imgRatioHP6;     
+            }
+        }
+
+            #pic5 {
+        /*img5 must be below img4 (+130px), to make img6 to float all the way left on screen*/     
+        margin-top:@fromToppDist + 55px;         
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @img5RatioWL6;   //Special img5     
+                height: @img5RatioHL6;   //Special img5     
+            }
+        }
+            #pic6 {
+        margin-top: @fromToppDist + 55px;
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @imgRatioWP6;     
+                height: @imgRatioHP6;     
+            }
+        }
+
+            #pic7 {
+        margin-top: @fromToppDist + 55px;
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @imgRatioWP6;     
+                height: @imgRatioHP6;     
+            }
+        }
+            
+            #pic8 {
+        margin-top: @fromToppDist - 15px;
+        margin-left:@fromLeftDist + 25px;
+            img{    
+                width: @imgRatioWP7;     
+                height: @imgRatioHP7;     
+            }
+        }
+            #pic9 {
+        margin-top: @fromToppDist + 55px;
+        margin-left:@fromLeftDist + 25px;   //!remember to surround + with spaces or will not render
+            img{    
+                width: @imgRatioWP6;     
+                height: @imgRatioHP6;     
+            }
+        }
+    
+    
+    
+    
+}   //END max-width 768, will not render if no this
+    
+    
+    

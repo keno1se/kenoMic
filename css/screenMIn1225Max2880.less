@@ -1,0 +1,84 @@
+@import "mixins";
+
+/*--------------------------------------------------------------------------*/
+/*         Media screen sizes                                               */
+/*          - (max-width: 768px)                                            */
+/*          - (min-width: 769px) and (max-width: 1224px)                    */
+/*          - (min-width: 1225px) and (max-width: 2880px)                   */
+/*--------------------------------------------------------------------------*/
+
+
+
+@media all and (min-width: 1225px) and (max-width: 2880px){
+        
+    /*body{
+            background: orange;
+    }*/
+    
+            #pic1{
+        margin-top:@fromToppDist + 30px;   //remember spacing arround + or it'll not work, count from page top
+        margin-left:@fromLeftDist + 680px;
+        width: 240px;     
+        height:180px;         
+        }
+   
+    
+            #pic2{
+        margin-top:@fromToppDist + 55px;                    
+        margin-left:@fromLeftDist + 15px;
+        width: 180px;     
+        height:240px;     
+        }
+
+            #pic3{
+        margin-top:@fromToppDist - 70px;
+        clear:left;     // starts a new float on a new row, will not float left
+        }
+          #pic4{
+        margin-top:@fromToppDist - 50px;                    
+        margin-left:@fromLeftDist + 20px;
+        width: 180px;     
+        height:240px;     
+        }
+
+            #sectionPic #pic5{
+        margin-top:@fromToppDist - 15px;                    
+        margin-left:@fromLeftDist + 5px;
+        width: 240px;     
+        height:142px;     
+        }
+            #pic6{
+        margin-top: @fromToppDist + 15px;
+        margin-left:@fromLeftDist + 25px;
+        width: 180px;     
+        height:240px;     
+        //clear:left;     // starts a new float on a new row
+        }
+
+            #sectionPic #pic7{
+        margin-top: @fromToppDist + 30px;
+        margin-left:@fromLeftDist + 65px;
+        width: 180px;     
+        height:240px;     
+        }
+            #pic8{
+        margin-top: @fromToppDist - 50px;
+        margin-left:@fromLeftDist + 265px;
+        width: 180px;     
+        height:240px;     
+        }
+            #sectionPic #pic9{
+        margin-top: @fromToppDist - 125px;
+        margin-left:@fromLeftDist + 25px;   //!remember to surround + with spaces or will not render
+        width: 180px;     
+        height:240px;     
+        }
+       
+    }   //closing bracket (min-width: 1225px), don't forget, will not render without 
+
+            #textBoxBottom{
+        position:absolute;      //no position, the page messes up,      
+        margin-top:@fromToppDist + 690px;       //margings count from top page
+        margin-left:@fromLeftDist + 725px;
+       }
+

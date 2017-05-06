@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------*/
+/*-- This is a test to resize images, using LESS feature      --*/
+/*--------------------------------------------------------------*/
+/*-- Valid for images with ratio 240px and 180px              --*/
+/*--------------------------------------------------------------*/
+
+
+    /*** WL1 ***/
+    /*** Landscape ***/
+	@imgRatioWL1: ((240/10)*1px);    //this will render width 24px 
+    @imgRatioHL1: ((180/10)*1px);    //this will render height 18px
+    /*** Portrait ***/
+	@imgRatioWP1: ((180/10)*1px);    //this will render width 18px
+    @imgRatioHP1: ((240/10)*1px);    //this will render height 24px 
+    
+    /*** WL2 ***/
+    /*** Landscape ***/
+    @imgRatioWL2: ((240/10)*2px);    //this will render width  48px 
+    @imgRatioHL2: ((180/10)*2px);    //this will render height  36px
+    /*** Portrait ***/
+    @imgRatioWP2: ((180/10)*2px);    //this will render width  36px 
+    @imgRatioHP2: ((240/10)*2px);    //this will render height  48px 
+    
+    /*** WL3 ***/
+    /*** Landscape ***/
+    @imgRatioWL3: ((240/10)*3px);    //this will render width  72px 
+    @imgRatioHL3: ((180/10)*3px);    //this will render height  54px
+    /*** Portrait ***/
+    @imgRatioWP3: ((180/10)*3px);    //this will render width  54px 
+    @imgRatioHP3: ((240/10)*3px);    //this will render height  72px 
+    
+    /*** WL4 ***/
+    /*** Landscape ***/
+    @imgRatioWL4: ((240/10)*4px);    //this will render width  96px 
+    @imgRatioHL4: ((180/10)*4px);    //this will render height  72px
+    /*** Portrait ***/
+    @imgRatioWP4: ((180/10)*4px);    //this will render width  72px 
+    @imgRatioHP4: ((240/10)*4px);    //this will render height  96px 
+    
+    /*** WL5 ***/
+    /*** Landscape ***/
+    @imgRatioWL5: ((240/10)*5px);    //this will render width  120px half size 
+    @imgRatioHL5: ((180/10)*5px);    //this will render height  90px half size
+    /*** Portrait ***/
+    @imgRatioWP5: ((180/10)*5px);    //this will render width   90px half size
+    @imgRatioHP5: ((240/10)*5px);    //this will render height  120px half size 
+    
+    /*** WL6 ***/
+    /*** Landscape ***/
+    @imgRatioWL6: ((240/10)*6px);    //this will render width  144px  
+    @imgRatioHL6: ((180/10)*6px);    //this will render height  108px 
+    /*** Portrait ***/
+    @imgRatioWP6: ((180/10)*6px);    //this will render width   108px 
+    @imgRatioHP6: ((240/10)*6px);    //this will render height  144px 
+    
+    /*** WL7 ***/
+    /*** Landscape ***/
+    @imgRatioWL7: ((240/10)*7px);    //this will render width  168px  
+    @imgRatioHL7: ((180/10)*7px);    //this will render height  126px 
+    /*** Portrait ***/
+    @imgRatioWP7: ((180/10)*7px);    //this will render width   126px 
+    @imgRatioHP7: ((240/10)*7px);    //this will render height  168px 
+    
+    /*** WL8 ***/
+    /*** Landscape ***/
+    @imgRatioWL8: ((240/10)*8px);    //this will render width  192px  
+    @imgRatioHL8: ((180/10)*8px);    //this will render height  144px 
+    /*** Portrait ***/
+    @imgRatioWP8: ((180/10)*8px);    //this will render width   144px 
+    @imgRatioHP8: ((240/10)*8px);    //this will render height  192px 
+    
+    /*** WL9 ***/
+    /*** Landscape ***/
+    @imgRatioWL9: ((240/10)*9px);    //this will render width  216px  
+    @imgRatioHL9: ((180/10)*9px);    //this will render height  162px 
+    /*** Portrait ***/
+    @imgRatioWP9: ((180/10)*9px);    //this will render width   162px 
+    @imgRatioHP9: ((240/10)*9px);    //this will render height  216px 
+    
+    /*** WL10 ***/
+    /*** Landscape ***/
+    @imgRatioWL10: ((240/10)*10px);    //this will render width  240px  
+    @imgRatioHL10: ((180/10)*10px);    //this will render height  180px 
+    /*** Portrait ***/
+    @imgRatioWP10: ((180/10)*10px);    //this will render width   180px 
+    @imgRatioHP10: ((240/10)*10px);    //this will render height  240px 
+    
+
+
+    /*** Special img5, the only one with H=142px***/
+    /*** Landscape ***/
+    @img5RatioWL1: ((240/10)*1px);   
+    @img5RatioHL1: ((142/10)*1px);   
+    @img5RatioWL2: ((240/10)*2px);   
+    @img5RatioHL2: ((142/10)*2px);   
+    @img5RatioWL3: ((240/10)*3px);   
+    @img5RatioHL3: ((142/10)*3px);   
+    @img5RatioWL4: ((240/10)*4px);   
+    @img5RatioHL4: ((142/10)*4px);   
+    @img5RatioWL5: ((240/10)*5px);   
+    @img5RatioHL5: ((142/10)*5px);   
+    @img5RatioWL6: ((240/10)*6px);   
+    @img5RatioHL6: ((142/10)*6px);   
+    @img5RatioWL7: ((240/10)*7px);   
+    @img5RatioHL7: ((142/10)*7px);   
+    @img5RatioWL8: ((240/10)*8px);   
+    @img5RatioHL8: ((142/10)*8px);   
+    @img5RatioWL9: ((240/10)*9px);   
+    @img5RatioHL9: ((142/10)*9px);   
+    @img5RatioWL1: ((240/10)*10px);    //this will render width  240px  
+    @img5RatioHL1: ((142/10)*10px);    //this will render height 142px 
+
+
+
+

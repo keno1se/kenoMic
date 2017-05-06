@@ -1,0 +1,90 @@
+
+/*--------------------------------------------------------------------------*/
+/*         Media screen sizes                                               */
+/*          - (max-width: 768px)                                            */
+/*          - (min-width: 769px) and (max-width: 1224px)                    */
+/*          - (min-width: 1225px) and (max-width: 2880px)                   */
+/*--------------------------------------------------------------------------*/
+@media all and (min-width: 769px) and (max-width: 1224px) {
+  /*body {
+            background: yellow;
+    }*/
+  #pic1 {
+    margin-top: 30px;
+    margin-left: 695px;
+  }
+  #pic1 img {
+    width: 168px;
+    height: 126px;
+  }
+  #pic2 {
+    margin-top: 55px;
+    margin-left: 40px;
+  }
+  #pic2 img {
+    width: 126px;
+    height: 168px;
+  }
+  #pic3 {
+    margin-top: 95px;
+    margin-left: 40px;
+  }
+  #pic3 img {
+    width: 168px;
+    height: 126px;
+  }
+  #pic4 {
+    margin-top: 55px;
+    margin-left: 40px;
+  }
+  #pic4 img {
+    width: 126px;
+    height: 168px;
+  }
+  /*img5 must be below img4 (+130px), to make img6 to float all the way left on screen*/
+  #pic5 {
+    margin-top: 130px;
+    margin-left: 40px;
+  }
+  #pic5 img {
+    width: 168px;
+    height: 99.4px;
+  }
+  #pic6 {
+    margin-top: 75px;
+    margin-left: 40px;
+  }
+  #pic6 img {
+    width: 126px;
+    height: 168px;
+  }
+  #pic7 {
+    margin-top: 75px;
+    margin-left: 40px;
+  }
+  #pic7 img {
+    width: 126px;
+    height: 168px;
+  }
+  #pic8 {
+    margin-top: 75px;
+    margin-left: 40px;
+  }
+  #pic8 img {
+    width: 126px;
+    height: 168px;
+  }
+  #pic9 {
+    margin-top: 75px;
+    margin-left: 40px;
+  }
+  #pic9 img {
+    width: 126px;
+    height: 168px;
+  }
+  #textBoxBottom {
+    position: absolute;
+    margin-top: 680px;
+    margin-left: 385px;
+  }
+}
